@@ -1,12 +1,19 @@
 Rails.application.routes.draw do
-  get 'items/index'
-  get 'items/show'
-  get 'items/new'
-  get 'items/create'
-  get 'items/edit'
-  get 'items/update'
-  get 'items/destroy'
-  devise_for :users
-  root to: 'pages#home'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  # browse all items
+  # /items => items#index(owner_id=nil)
+
+  # POST /items => items#create
+  resources :items, only: [:index, :show, :create, :destroy]
+
+  # view an item
+  # /items/42 => items#show
+
+  # browse all items of an owner
+  # /owners/1/items => items#index(owner_id=1)
+  resources :owners do
+    resources :items, only: :index
+  end
 end
