@@ -16,4 +16,8 @@ class ItemPolicy < ApplicationPolicy
   def destroy?
     update?
   end
+
+  def show?
+    return true
+  end
 end
