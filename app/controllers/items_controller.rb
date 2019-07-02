@@ -61,6 +61,11 @@ class ItemsController < ApplicationController
   end
 
   private
+
+  def pundit_user
+    current_owner
+  end
+
   def set_item
     @item = Item.find(params[:id])
   end
