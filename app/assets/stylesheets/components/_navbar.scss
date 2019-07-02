@@ -3,7 +3,7 @@
   display:flex;
   align-items:center;
   justify-content:space-between;
-
+  background-color:rgb(255, 255, 255);
 }
 
 
@@ -13,24 +13,33 @@
   text-decoration:none;
   border-radius:4px;
   font-size:16px;
-  font-weight:400 !important;
-  color:white;
-
+  color:white !important;
 }
+
+
+.navbar-main img {
+  margin: 0 10px;
+}
+
 
 .navbar-list ul li {
   list-style:none;
   display:inline-block;
-
 }
 
 .navbar-list a {
   color:black;
   text-decoration:none;
   margin:0 10px;
-  font-weight:200;
+  font-weight:800;
   font-family: 'Poppins', sans-serif;
 }
+
+.navbar-list a:hover {
+  color:#6494aa;
+
+}
+
 
 .navbar-list ul {
   margin-bottom: 0;
