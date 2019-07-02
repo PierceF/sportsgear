@@ -5,4 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+<<<<<<< HEAD
+=======
+skates = [
+  {
+    name: 'skates',
+    description: 'roll around',
+    price: 18
+  }
+]
+Item.create!(skates)
+
+>>>>>>> 07d93789fe6bdefe25d6a641df5b23a5ae8b007b
 
