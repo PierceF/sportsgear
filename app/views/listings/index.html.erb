@@ -26,6 +26,16 @@
       </tr>
     <% end %>
 
+    <% @deals.each do |deal| %>
+      <tr>
+        <td><%= deal.item.photos %></td>
+        <td><%= deal.item.name %></td>
+        <td><%= deal.item.price %></td>
+
+      </tr>
+    <% end %>
+
+
   </tbody>
 </table>
 
