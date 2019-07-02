@@ -37,7 +37,6 @@ class ApplicationPolicy
   class Scope
     attr_reader :owner, :scope
 
-
     def initialize(owner, scope)
       @owner = owner
       @scope = scope

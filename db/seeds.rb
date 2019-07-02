@@ -13,24 +13,3 @@ skates = [
   }
 ]
 Item.create!(skates)
-
-
-
-lena = Owner.new [
-{
-  email: "Lena@lena.com"
-  password: "12345"
-
-}
-
-]
-
-pierce = User.new [
-{
-  name: "Pierce5000"
-  email: "Pierce@pierce.com"
-  password: "12345"
-}
-
-]
-
