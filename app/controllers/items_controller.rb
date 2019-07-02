@@ -21,8 +21,8 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     @item.owner = current_owner
-      authorize @item
-      respond_to do |format|
+    authorize @item
+    respond_to do |format|
       if @item.save
         format.html { redirect_to @item, notice: "Item was created."}
         format.json { render :show, status: :created, location: @item }
@@ -40,20 +40,16 @@ class ItemsController < ApplicationController
   def update
     authorize @item
 
-    respond_to do |format|
-      if @item.save
-        format.html { redirect_to @item, notice: "Item was updated."}
-        format.json { render :show, status: :created, location: @item }
-      else
-        format.html { render :new }
-        format.json { render json: @item.errors, status: :unprocessable_entity }
-      end
+    if @item.update(item_params)
+      redirect_to item_path(@item)
+    else
+      render :edit
     end
   end
 
   def destroy
     authorize @item
-      @item.destroy
+    @item.destroy
     respond_to do |format|
       format.html { redirect_to items_url, notice: "Item was destroyed."}
       format.json {head :no_content}

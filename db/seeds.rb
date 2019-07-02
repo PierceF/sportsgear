@@ -13,5 +13,3 @@ skates = [
   }
 ]
 Item.create!(skates)
-
-
