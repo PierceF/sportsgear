@@ -16,6 +16,10 @@ Rails.application.routes.draw do
 
 
   devise_for :owners
+  # devise_scope :owner do
+  # authenticated :owner do
+  #   root 'owners#show', as: :authenticated_root
+  # end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   # browse all items
