@@ -19,6 +19,15 @@ Rails.application.routes.draw do
 
   devise_for :owners
 
+
+
+# def root
+#   if owner_signed_in?
+#     redirect_to 'listings#index'
+#   else
+#     redirect_to 'items#index'
+#   end
+# end
 #   devise_scope :owner do
 #   authenticated :owner do
 #     root 'listings#index', as: :authenticated_root
