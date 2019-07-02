@@ -1,2 +1,31 @@
 <h1>Listings#index</h1>
 <p>Find me in app/views/listings/index.html.erb</p>
+<h1>Listings#index</h1>
+<p>Find me in app/views/listings/index.html.erb</p>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Gears</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <td><%= item.photos %></td>
+        <td><%= item.name %></td>
+        <td><%= item.price %></td>
+        <td><%= link_to 'Show', item %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

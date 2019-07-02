@@ -9,7 +9,17 @@ skates = [
   {
     name: 'skates',
     description: 'roll around',
-    price: 18
+    price: 18,
+    owner_id: 1
+  }
+]
+ball = [
+  {
+    name: 'ball',
+    description: 'roll around',
+    price: 18,
+    owner_id: 2
   }
 ]
 Item.create!(skates)
+Item.create!(ball)
