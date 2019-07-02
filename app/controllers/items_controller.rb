@@ -1,9 +1,11 @@
 class ItemsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
+  before_action :authenticate_owner!, except: [:index, :show]
+
   def index
-    @items = Item.all
+    # @items = Item.all
+    @items = policy_scope(Item)
   end
 
   def show
@@ -12,36 +14,53 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
-    @item.save
+    # @item.save
+    authorize @item
   end
 
   def create
     @item = Item.new(item_params)
+    @item.owner = current_owner
+      authorize @item
+      respond_to do |format|
       if @item.save
-        redirect_to item_path(@item)
+        format.html { redirect_to @item, notice: "Item was created."}
+        format.json { render :show, status: :created, location: @item }
       else
-        render :new
+        format.html { render :new }
+        format.json { render json: @item.errors, status: :unprocessable_entity }
+      end
     end
   end
 
   def edit
+    authorize @item
   end
 
   def update
-    if @item.update(item_params)
-      redirect_to item_path(@item)
-    else
-      render :edit
+    authorize @item
+
+    respond_to do |format|
+      if @item.save
+        format.html { redirect_to @item, notice: "Item was updated."}
+        format.json { render :show, status: :created, location: @item }
+      else
+        format.html { render :new }
+        format.json { render json: @item.errors, status: :unprocessable_entity }
+      end
     end
   end
 
   def destroy
-    @item.destroy
-    redirect_to_item_path(@item)
+    authorize @item
+      @item.destroy
+    respond_to do |format|
+      format.html { redirect_to items_url, notice: "Item was destroyed."}
+      format.json {head :no_content}
+    end
   end
 
   private
-
   def set_item
     @item = Item.find(params[:id])
   end
