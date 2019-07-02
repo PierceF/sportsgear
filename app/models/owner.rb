@@ -1,6 +1,7 @@
 class Owner < ApplicationRecord
-  validates :name, uniqueness: true, presence: true
-  validates :email, uniqueness: true, presence: true
-  has_many :items, dependent: :destroy
-  has_many :deals, through: :items
+  has_many :items
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
 end
