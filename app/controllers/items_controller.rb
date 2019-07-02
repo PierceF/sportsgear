@@ -14,7 +14,6 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
-    @item.save
     # @item.save
     authorize @item
   end
@@ -40,6 +39,7 @@ class ItemsController < ApplicationController
 
   def update
     authorize @item
+
     if @item.update(item_params)
       redirect_to item_path(@item)
     else
