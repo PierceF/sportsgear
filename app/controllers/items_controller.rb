@@ -10,6 +10,7 @@ class ItemsController < ApplicationController
 
   def show
     @items = Item.find(params[:id])
+    authorize @item
   end
 
   def new

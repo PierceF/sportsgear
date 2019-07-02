@@ -5,11 +5,20 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+lena = Owner.create!(email: "lena@lena.com", password: "123456", password_confirmation: "123456")
+
+pierce = User.create!(email: "pierce@pierce.com", password: "123456", password_confirmation: "123456")
+
+pontus = User.create!(email: "pontus@pontus.com", password: "123456", password_confirmation: "123456")
+
 skates = [
   {
     name: 'skates',
     description: 'roll around',
-    price: 18
+    price: 18,
+    owner_id: 1
   }
 ]
 Item.create!(skates)
