@@ -1,7 +1,9 @@
 class DealsController < ApplicationController
-
+  before_action :authenticate_user!
   def index
-    @deals = Deal.all
+    @deals = current_user.deals
+    # @deals = policy_scope(Deal)
+    skip_policy_scope
   end
 
   def new

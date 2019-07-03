@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :listings, only: :index
+  resources :deals, only: :index
 
   devise_for :users
   #   devise_scope :user do
@@ -42,6 +43,7 @@ Rails.application.routes.draw do
   resources :items, only: [:index, :show, :create, :destroy, :new, :edit, :update] do
     resources :deals, only: [:create, :index, :show, :new]
   end
+
 
   # view an item
   # /items/42 => items#show
