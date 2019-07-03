@@ -1,4 +1,7 @@
-
+lena = Owner.create!(email: 'lena@lena.com',password: '123456')
+pontus = User.create!(email: 'pontus@pontus.com',password: '123456')
+steven = Owner.create!(email: 'steven@steven.com',password: '123456')
+pierce = User.create!(email: 'pierce@pierce.com',password: '123456')
 
 
 ball = [
@@ -19,28 +22,10 @@ tent = [
   }
 ]
 
-shoes = [
-  {
-    name: 'shoes',
-    description: 'roll around',
-    price: 18,
-    owner_id: 2
-  }
-]
 
 
-deal1 = [
-  {
-    status: 'pending',
-    item_id: 1,
-    user_id: 1
-  }
-]
-
-Item.create!(skates)
 Item.create!(ball)
-Deal.create!(deal1)
 Item.create!(tent)
-Item.create!(shoes)
+
 
 
