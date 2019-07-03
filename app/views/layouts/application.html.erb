@@ -19,12 +19,23 @@
     <li><%= link_to "Find Gear", items_path %></li>
     <li><a href="">Rent Gear</a></li>
     <li><%= link_to "Register", new_user_registration_path %></li>
-    <li><%= link_to "Log In", new_user_session_path, class: "button-small" %></li>
+    <li><a class="button-small button" href="#popup1">Log In</a></li>
+    
   </ul>
+  <div id="popup1" class="overlay">
+  <div class="popup">
+    <h2>Choose your portal</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Log in as a:
+      <a  href="/users/sign_in">User</a>
+      <a  href="/owners/sign_in">Owner</a>
+    </div>
+  </div>
 </div>
 </div>
 </div>
-
+</div>
 
 </div>
     <%= yield %>
