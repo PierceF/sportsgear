@@ -3,7 +3,7 @@
 
 
 <div class="container-main">
-<h1>Your current listings</h1>
+<h1 class="center-text">Your current listings</h1>
 <div class="grid-main">
     <% @items.each do |item| %>
     <div class="card-horizontal">
@@ -17,14 +17,20 @@
 
         <% end %>
         </div>
-        <h2>Your Current Deals</h2>
-        <div class="listings-flex">
+        <h2 class="center-text">Your Current Deals</h2>
+
         <% @deals.each do |deal| %>
         <div class="main-group">
-        <p><%= deal.item.name %></p>
-        <p><%= deal.item.price %></p>
-        </div>
+          <div class="box-text-styling">
+
+        <p style="font-weight:800;"><%= deal.item.name %></p>
+        <p style="font-weight:200"><%= deal.item.description %></p>
+        <p style="font-weight:800";><%= deal.duration %> days</p>
+       <p style="font-weight:200;">Total: <%= deal.duration * deal.item.price %></p>
+       </div>
+
+       </div>
         <% end %>
-        </div>
           <%= link_to 'New Item', new_item_path, class: "button-small" %>
+          </div>
       </div>
