@@ -1,0 +1,22 @@
+.card-categories-image {
+  border-radius:4px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:40px;
+}
+
+.card-categories-image:hover {
+  transition:0.3s;
+  overflow:hidden;
+
+}
+
+.card-categories-image a {
+  color:white;
+  display:flex;
+  text-decoration:none;
+  font-size:32px;
+  font-weight:200;
+}
+

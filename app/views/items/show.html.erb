@@ -1,12 +1,11 @@
-<h1><%= @item.name %></h1>
 
 
-<p> <%= @item.description %> </p>
-
-<p> $<%= @item.price %> per day!</p>
-
-
-<h2>Offer to make a deal</h2>
+<div class="container-main">
+  <div class="center-text">
+<h2><%= @item.name.capitalize %></h2>
+<p><%= @item.price %>$</p>
+<%= @item.description %>
+</div>
 
 <%= render 'formRent', item: @deal %>
-
+</div>

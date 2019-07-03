@@ -3,29 +3,18 @@
  <a class="button-large" href="">FIND GEAR</a>
  </div>
   </div>
-
-
-
 </div>
 
-<thead>
-    <tr>
-      <th>Name</th>
-      <th>Banner url</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="container-main">
 
-  <tbody>
-    <% @items.each do |item| %>
-      <tr>
-        <td><%= item.photos %></td>
-        <td><%= link_to 'Show', item %></td>
-      </tr>
+<div class="grid-main">
+
+  <% @items.each do |item| %>
+  <div class="card-categories-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1545787636-35db70ee2e6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80'); max-width:300px; height:150px; background-size:cover;">
+    <%= link_to item.name.capitalize, item_path(item) %>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
+  </div>
+  </div>
 
 
