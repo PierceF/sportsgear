@@ -17,16 +17,14 @@
 
         <% end %>
         </div>
-
-        <h2>Your Deal Requests</h2>
-        <div class="grid-main">
+        <h2>Your Current Deals</h2>
+        <div class="listings-flex">
         <% @deals.each do |deal| %>
-        <div class="card-horizontal">
+        <div class="main-group">
         <p><%= deal.item.name %></p>
         <p><%= deal.item.price %></p>
         </div>
-        </div>
         <% end %>
-
+        </div>
           <%= link_to 'New Item', new_item_path, class: "button-small" %>
       </div>

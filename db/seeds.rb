@@ -7,14 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-skates = [
-  {
-    name: 'skates',
-    description: 'roll around',
-    price: 18,
-    owner_id: 1
-  }
-]
 
 ball = [
   {
