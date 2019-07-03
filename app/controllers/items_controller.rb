@@ -11,6 +11,7 @@ class ItemsController < ApplicationController
   def show
     @items = Item.find(params[:id])
     authorize @item
+    @deal = Deal.new
   end
 
   def new
