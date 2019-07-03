@@ -18,9 +18,6 @@ Rails.application.routes.draw do
 
 
   devise_for :owners
-
-
-
 # def root
 #   if owner_signed_in?
 #     redirect_to 'listings#index'
@@ -42,7 +39,9 @@ Rails.application.routes.draw do
   # /items => items#index(owner_id=nil)
 
   # POST /items => items#create
-  resources :items, only: [:index, :show, :create, :destroy]
+  resources :items, only: [:index, :show, :create, :destroy, :new] do
+    resources :deals, only: [:create, :index, :destroy, :show, :new]
+  end
 
   # view an item
   # /items/42 => items#show
