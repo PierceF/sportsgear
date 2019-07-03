@@ -17,6 +17,10 @@ class ItemPolicy < ApplicationPolicy
     update?
   end
 
+  def index?
+    true
+  end
+
   def show?
     return true
   end

@@ -5,12 +5,11 @@ class ItemsController < ApplicationController
 
   def index
     # @items = Item.all
-    @items = policy_scope(Item)
+    @items = Item.all
   end
 
   def show
     @items = Item.find(params[:id])
-    authorize @item
     @deal = Deal.new
   end
 
