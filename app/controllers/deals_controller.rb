@@ -8,6 +8,7 @@ class DealsController < ApplicationController
     @deal = Deal.new(deal_params)
     @deal.user = User.find(params[:user_id])
     @deal.item = Item.find(params[:item][:item_id])
+    @deal.status = "pending"
     @deal.start_date = Date.today
     @deal.save
     redirect_to listings_path
