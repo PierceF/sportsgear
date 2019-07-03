@@ -40,7 +40,7 @@ Rails.application.routes.draw do
 
   # POST /items => items#create
   resources :items, only: [:index, :show, :create, :destroy, :new] do
-    resources :deals, only: [:create, :index, :destroy, :show, :new]
+    resources :deals, only: [:create, :index, :show, :new]
   end
 
   # view an item
