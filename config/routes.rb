@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :listings, only: :index
+  resources :deals, only: :index
 
   devise_for :users
   #   devise_scope :user do
@@ -39,9 +40,11 @@ Rails.application.routes.draw do
   # /items => items#index(owner_id=nil)
 
   # POST /items => items#create
+  # GET /items/42/deals
   resources :items, only: [:index, :show, :create, :destroy, :new] do
-    resources :deals, only: [:create, :index, :show, :new]
+    resources :deals, only: [:create, :show, :new]
   end
+
 
   # view an item
   # /items/42 => items#show
