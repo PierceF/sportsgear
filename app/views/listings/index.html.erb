@@ -18,19 +18,17 @@
         <% end %>
         </div>
         <h2 class="center-text">Your Current Deals</h2>
-
+          <div class="main-group">
         <% @deals.each do |deal| %>
-        <div class="main-group">
           <div class="box-text-styling">
-
         <p style="font-weight:800;"><%= deal.item.name %></p>
         <p style="font-weight:200"><%= deal.item.description %></p>
         <p style="font-weight:800";><%= deal.duration %> days</p>
        <p style="font-weight:200;">Total: <%= deal.duration * deal.item.price %></p>
        </div>
-
-       </div>
         <% end %>
+      </div>
+        </div>
           <%= link_to 'New Item', new_item_path, class: "button-small" %>
           </div>
       </div>
