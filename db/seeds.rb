@@ -7,14 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-lena = Owner.create!(email: "lena@lena.com", password: "123456", password_confirmation: "123456")
-
-steven = Owner.create!(email: "steven@steven.com", password: "123456", password_confirmation: "123456")
-
-pierce = User.create!(email: "pierce@pierce.com", password: "123456", password_confirmation: "123456")
-
-pontus = User.create!(email: "pontus@pontus.com", password: "123456", password_confirmation: "123456")
-
 skates = [
   {
     name: 'skates',
@@ -35,7 +27,7 @@ ball = [
 
 deal1 = [
   {
-    status: 'penng',
+    status: 'pending',
     item_id: 1,
     user_id: 1
   }
