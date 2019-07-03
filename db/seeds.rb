@@ -7,11 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-lena = Owner.create!(email: "lena@lena.com", password: "123456", password_confirmation: "123456")
-
-pierce = User.create!(email: "pierce@pierce.com", password: "123456", password_confirmation: "123456")
-
-pontus = User.create!(email: "pontus@pontus.com", password: "123456", password_confirmation: "123456")
 
 skates = [
   {

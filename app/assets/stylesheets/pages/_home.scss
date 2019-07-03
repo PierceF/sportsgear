@@ -1,1 +1,13 @@
 // Specific CSS for your home-page
+
+.container-main {
+  width:1000px;
+  margin:0 auto;
+  height:80vh;
+}
+
+.grid-main {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap:10px;
+}
