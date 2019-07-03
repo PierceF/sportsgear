@@ -1,10 +1,10 @@
 
-<%= simple_form_for(@deal) do |f| %>
+<%= simple_form_for([@item, @deal]) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.association :duration, collection: ['1', '2', '3', '4', '5', '6', '7'], prompt: "How long would you like to rent?" %>
+    <%= f.input :duration, collection: [1, 2, 3, 4, 5, 6, 7], prompt: "How long would you like to rent?" %>
   </div>
 
 
