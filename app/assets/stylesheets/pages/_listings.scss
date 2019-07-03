@@ -2,23 +2,24 @@
 
 
 .main-group {
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    height:250px;
-    width:200px;
-    font-family: 'Poppins', sans-serif;
-    border-radius:4px;
-    display:flex;
-    margin:50px 0px;
 
+    font-family: 'Poppins', sans-serif;
+    display:grid;
+    grid-gap:30px;
+    grid-template-columns:1fr 1fr 1fr 1fr;
 }
 
 .box-text-styling {
+  margin:0px 0px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  height:250px;
-  width:200px;
+  padding:40px 40px;
+
+  background-color:#FFFFFF;
+  border-radius:4px;
 }
 
 
