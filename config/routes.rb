@@ -39,7 +39,7 @@ Rails.application.routes.draw do
   # /items => items#index(owner_id=nil)
 
   # POST /items => items#create
-  resources :items, only: [:index, :show, :create, :destroy, :new] do
+  resources :items, only: [:index, :show, :create, :destroy, :new, :edit, :update] do
     resources :deals, only: [:create, :index, :show, :new]
   end
 
