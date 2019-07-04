@@ -5,6 +5,7 @@ class ItemsController < ApplicationController
 
   def index
     Deal.ongoing
+    Deal.show
 
     if params[:query].present?
       @items = Item.search_by_name_and_description(params[:query])

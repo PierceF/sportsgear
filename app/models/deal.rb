@@ -15,7 +15,9 @@ class Deal < ApplicationRecord
         deal.save
       end
     end
+  end
 
+def self.show
     deals = Deal.where(status: "ongoing")
     items_to_change = []
     deals.each do |deal|

@@ -3,6 +3,7 @@ class ListingsController < ApplicationController
   # before_action :set_owner, only: [:show, :update, :destroy, :index]
 
   def index
+    Deal.ongoing
     @items = policy_scope(Item)
     @pending_deals = current_owner.deals.where(status: 'pending')
     @current_deals = current_owner.deals.where(status: 'ongoing')
