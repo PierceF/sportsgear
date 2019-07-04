@@ -1,9 +1,11 @@
+
 <div class="banner-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1459378560864-f0b73495599c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80);">
   <h2>FIND THE BEST GEAR FOR YOUR NEXT <br>
     <span class="banner-text-style"> BIG ADVENTURE</span>
   </h2>
   <a class="button-large" href="">FIND GEAR</a>
 </div>
+<div class="container-form">
 <%= form_tag root_path, method: :get do %>
   <%= text_field_tag :query,
     params[:query],
@@ -21,17 +23,16 @@
 </div>
 
 <div class="container-main">
+</div>
 
-
+<div class="container-main">
 <h2 class="text-center text-fat margin-title text-large"> OUR TOP PICKS</h2>
 <div class="grid-main">
   <% @list_items.each do |item| %>
   <div class="card-mainpage">
-
   <div class="card-mainpage-text">
-  <!-- <div class="card-categories-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1545787636-35db70ee2e6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80'); max-width:300px; height:150px; background-size:cover;"> -->
-
-
+    <%= cl_image_tag( item.photos,
+      width: 300, height: 150, crop: :fill) %>
     <%= link_to item.name.capitalize, item_path(item) %>
     <h3><%= item.price %></h3>
     </div>
@@ -39,5 +40,6 @@
     <% end %>
   </div>
 </div>
+
 
 

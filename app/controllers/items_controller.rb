@@ -4,11 +4,15 @@ class ItemsController < ApplicationController
   before_action :authenticate_owner!, except: [:index, :show]
 
   def index
+    Deal.ongoing
+    Deal.show
+
     if params[:query].present?
       @items = Item.search_by_name_and_description(params[:query])
     else
       @items = Item.all
     end
+
     @list_items = @items.where(list: true)
 
     @markers = @items.map do |item|

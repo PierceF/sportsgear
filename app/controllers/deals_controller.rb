@@ -3,6 +3,7 @@ class DealsController < ApplicationController
   def index
     @deals = current_user.deals
     # @deals = policy_scope(Deal)
+    # skip policy scope
     skip_policy_scope
   end
 
