@@ -1,7 +1,10 @@
-<h1>New Item</h1>
+
+<div class="container-form">
+<h1 class="text-center text-fat margin-title">New Item</h1>
 
 <%= render 'form', item: @item %>
 
 
-<%= link_to 'Back', listings_path %>
+<%= link_to 'Back', listings_path, :class => "button-small" %>
 
+</div>
