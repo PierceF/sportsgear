@@ -12,7 +12,8 @@
     </head>
     <body>
       <div class="navbar-main">
-        <%= image_tag "logo.png", alt: "Le Wagon", width: 120%>
+        <%= link_to image_tag("logo", :alt => "Image Description", width:140), root_path %>
+
         <div class="group-navbar">
           <div class="navbar-list">
 
@@ -27,7 +28,7 @@
               <li><%= link_to "Home", root_path %></li>
               <li><%= link_to "List New Gear", listings_path %></li>
               <li><%= link_to "Log Out", destroy_owner_session_path, method: :delete, :class => "button-small-red" %></li>
-              <%= image_tag "profile", width:50, :class => "avatar avatar-profile"  %>
+              <%= link_to image_tag("profile", :alt => "Image Description", :class => "avatar"), listings_path %>
               </ul>
               <% else %>
               <ul>
@@ -35,9 +36,8 @@
                 <li><%= link_to "Find Gear", items_path, :class => "scroll-event-menu" %></li>
                 <li><%= link_to "Rent Gear", listings_path%></li>
                 <li><%= link_to "Register", new_user_registration_path, :href => "#popup2" %></li>
-                <li>
-                  <a class="button-small " href="#popup1">Log In</a>
-                </li>
+                <li><a class="button-small " href="#popup1">Log In</a></li>
+                <%= link_to image_tag("profile", :alt => "Image Description", :class => "avatar"), root_path %>
                 </ul>
               <% end %>
 
