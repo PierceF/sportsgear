@@ -4,9 +4,9 @@ class ListingsController < ApplicationController
 
   def index
     @items = policy_scope(Item)
-    @pending_deals = Deal.where(status: 'pending')
-    @current_deals = Deal.where(status: 'ongoing')
-    @finished_deals = Deal.where(status: 'finished')
+    @pending_deals = Deal.where(status: 'pending') && Deal.where(item_id: current_owner)
+    @current_deals = Deal.where(status: 'ongoing') && Deal.where(item_id: current_owner)
+    @finished_deals = Deal.where(status: 'finished') && Deal.where(item_id: current_owner)
   end
 
   private
