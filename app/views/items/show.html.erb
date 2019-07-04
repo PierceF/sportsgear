@@ -1,11 +1,13 @@
 
 
-<div class="container-main">
+<div class="container-form">
   <div class="center-text">
 <h2><%= @item.name.capitalize %></h2>
 <p><%= @item.price %>$</p>
-<%= @item.description %>
+<h3><%= @item.description %></h3>
 </div>
 
+<div class="margin-title">
 <%= render 'formRent', item: @deal %>
+</div>
 </div>
