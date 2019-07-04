@@ -4,8 +4,11 @@ class ItemsController < ApplicationController
   before_action :authenticate_owner!, except: [:index, :show]
 
   def index
-    # @items = Item.all
-    @items = Item.all
+    if params[:query].present?
+      @items = Item.search_by_name_and_description(params[:query])
+    else
+      @items = Item.all
+    end
   end
 
   def show
