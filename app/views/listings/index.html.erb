@@ -18,7 +18,7 @@
         </div>
         <h2 class="center-text">Your Current Deals</h2>
         <div class="main-group">
-        <% @deals.each do |deal| %>
+        <% @pending_deals.each do |deal| %>
 
           <div class="box-text-styling">
         <p style="font-weight:800;"><%= deal.item.name %></p>
