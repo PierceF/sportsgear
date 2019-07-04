@@ -5,10 +5,9 @@ class ItemsController < ApplicationController
 
   def index
     if params[:query].present?
-      @items = Item.where.not(latitude: nil, longitude: nil)
-                   .search_by_name_and_description(params[:query])
+      @items = Item.search_by_name_and_description(params[:query])
     else
-      @items = Item.where.not(latitude: nil, longitude: nil)
+      @items = Item.all
     end
     @list_items = @items.where(list: true)
 
@@ -20,6 +19,7 @@ class ItemsController < ApplicationController
 
       }
     end
+    # raise
   end
 
   def show

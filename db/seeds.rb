@@ -1,6 +1,12 @@
-lena = Owner.create!(email: 'lena@lena.com',password: '123456', address: 'Zacharias Jansestraat 5, Amsterdam')
+# Item.destroy_all
+# Owner.destroy_all
+# User.destroy_all
+# Deal.destroy_all
+
+
+lena = Owner.create!(email: 'lena@lena.com',password: '123456', address: 'Zacharias Jansestraat 5, Amsterdam, The Netherlands')
 pontus = User.create!(email: 'pontus@pontus.com',password: '123456')
-steven = Owner.create!(email: 'steven@steven.com',password: '123456', address: 'Dam 5, 1012RB, Amsterdam')
+steven = Owner.create!(email: 'steven@steven.com',password: '123456', address: 'Dam 5, 1012RB, Paris, France')
 pierce = User.create!(email: 'pierce@pierce.com',password: '123456')
 
 skates = Item.create!(name: 'skates', price: 12, description: 'Used to roll around', owner: lena)

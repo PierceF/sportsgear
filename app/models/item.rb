@@ -6,13 +6,6 @@ class Item < ApplicationRecord
   has_many :deals
   mount_uploader :photos, PhotoUploader
 
-  geocoded_by :owner_address
-  after_validation :geocode
-
-  def owner_address
-    owner.address
-  end
-
   include PgSearch
   # Movie.search_by_title_and_syllabus(query)
   pg_search_scope :search_by_name_and_description,
