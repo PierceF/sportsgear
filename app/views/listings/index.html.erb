@@ -11,6 +11,7 @@
       <%= cl_image_tag item.photos, height: 100, width: 100, crop: :fill, :class => "card-horizontal-image" %>
       <div class="card-horizontal-text">
         <p><%= link_to item.name.capitalize, item_path(item) %></p>
+<<<<<<< HEAD
         <p><%= item.price %>$ </p>
       </div>
     </div>
@@ -32,6 +33,29 @@
   </div>
 
   <%= link_to 'New Item', new_item_path, class: "button-small" %>
+=======
+          <p><%= item.price %>$ </p>
+          </div>
+          </div>
+        <% end %>
+      
+
+        <h2 class="center-text text-fat margin-title text-large">Your Current Deals</h2>
+        <% @deals.each do |deal| %>
+        <div class="card-horizontal">
+          <%= cl_image_tag deal.item.photos, height: 100, width: 100, crop: :fill, :class => "card-horizontal-image" %>
+        <div class="card-horizontal-text">
+        <p style="font-weight:800;"><%= deal.item.name %></p>
+        <p style="font-weight:800";><%= deal.duration %> days</p>
+       <p style="font-weight:200;">Total: <%= deal.duration * deal.item.price %></p>
+       </div>
+       </div>
+        <% end %>
+          <%= link_to 'New Item', new_item_path, class: "button-small" %>
+
+
+
+>>>>>>> e4b7ac0d21bff939fd3edb6b3d7ebc1440005eff
 
 </div>
 <!--
