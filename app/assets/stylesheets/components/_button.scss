@@ -40,3 +40,20 @@
 
 }
 
+.button-large-color {
+  padding:16px 56px;
+  background-color:#6494AA;
+  color:white;
+  text-decoration:none;
+  border-radius:4px;
+  font-weight:800;
+  display:block;
+  width:180px;
+  margin:0 auto;
+}
+.button-large-color:hover {
+  background-color:#496C7C;
+  transition:0.3s;
+  text-decoration:none;
+  color:white;
+}
