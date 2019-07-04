@@ -17,6 +17,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
 gem 'pundit'
+gem 'pg_search'
 gem 'carrierwave', '~> 1.3', '>= 1.3.1'
 
 group :development do
