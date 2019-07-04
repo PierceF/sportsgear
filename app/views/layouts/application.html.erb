@@ -1,53 +1,51 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TODO</title>
+    <%= csrf_meta_tags %>
+    <%= action_cable_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+  </head>
+  <body>
+    <div class="navbar-main">
+  <%= image_tag "logo.png", alt: "Le Wagon", width: 120%>
+<div class="group-navbar">
+  <div class="navbar-list">
+  <ul>
+    <li><%= link_to "Home", root_path %></li>
+    <li><%= link_to "Find Gear", items_path %></li>
+    <li><a href="">Rent Gear</a></li>
+    <li><%= link_to "Register", new_user_registration_path %></li>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>TODO</title>
-  <%= csrf_meta_tags %>
-  <%= action_cable_meta_tag %>
-  <%= stylesheet_link_tag 'application', media: 'all' %>
-  <%#= stylesheet_pack_tag 'application', media: 'all' %>
-  <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
-</head>
-
-<body>
-  <div class="navbar-main">
-    <%= image_tag "logo.png", alt: "Le Wagon", width: 120%>
-    <div class="group-navbar">
-      <div class="navbar-list">
-        <ul>
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Find Gear", items_path %></li>
-          <li><a href="">Rent Gear</a></li>
-          <li><%= link_to "Register", new_user_registration_path %></li>
-          <li><a class="button-small button" href="#popup1">Log In</a></li>
-
-
-        </ul>
-        <div id="popup1" class="overlay">
-          <div class="popup">
-            <h2 class="text-center text-medium">Choose your portal</h2>
-            <a class="close" href="#">&times;</a>
-            <div class="content text-center">
-              <a href="/users/sign_in ">User</a>
-              <a href="/owners/sign_in">Owner</a>
-            </div>
-          </div>
-        </div>
-      </div>
+    <li><a class="button-small button" href="#popup1">Log In</a></li>
+   
+  </ul>
+  <div id="popup1" class="overlay">
+  <div class="popup">
+    <h2>Choose your portal</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Log in as a:
+      <a  href="/users/sign_in">User</a>
+      <a  href="/owners/sign_in">Owner</a>
     </div>
   </div>
+</div>
+</div>
+</div>
+</div>
 
-  </div>
-  <%= yield %>
-  <%= javascript_include_tag 'application' %>
-  <%= javascript_pack_tag 'application' %>
+</div>
+    <%= yield %>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
 
-  <div class="footer-main">
-    <div class="footer-text">
-      <h2>PierceGear</h2>
+<div class="footer-main">
+  <div class="footer-text">
+    <h2>PierceGear</h2>
       <ul>
         <li><a href="">Home</a></li>
         <li><a href="">Find Gear</a></li>
@@ -59,6 +57,5 @@
     </div>
   </div>
 
-</body>
-
+  </body>
 </html>
