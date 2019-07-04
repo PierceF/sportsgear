@@ -6,6 +6,17 @@ class ItemsController < ApplicationController
   def index
     # @items = Item.all
     @items = Item.all
+
+    @items = Item.where.not(latitude: nil, longitude: nil)
+
+    @markers = @items.map do |item|
+      {
+        lat: item.owner.latitude,
+        lng: item.owner.longitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { item: item })
+
+      }
+    end
   end
 
   def show
