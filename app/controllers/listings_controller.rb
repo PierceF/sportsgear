@@ -1,6 +1,6 @@
 class ListingsController < ApplicationController
   before_action :authenticate_owner!
-  before_action :set_owner, only: [:show, :update, :destroy, :index]
+  # before_action :set_owner, only: [:show, :update, :destroy, :index]
 
   def index
     @items = policy_scope(Item)
