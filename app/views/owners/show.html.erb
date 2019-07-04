@@ -1,1 +1,46 @@
-This is the owner page
+<div class="container-main">
+
+  <h2 class="center-text text-fat margin-title text-large">Your current listings</h2>
+    <% @items.each do |item| %>
+    <div class="card-horizontal">
+       <%= cl_image_tag item.photos, height: 100, width: 100, crop: :fill, :class => "card-horizontal-image" %>
+       <div class="card-horizontal-text">
+        <p><%= link_to item.name.capitalize, item_path(item) %></p>
+          <p><%= item.price %>$ </p>
+          </div>
+          </div>
+        <% end %>
+
+
+        <h2 class="center-text text-fat margin-title text-large">Your Current Deal offers</h2>
+        <% @pending_deals.each do |deal| %>
+        <div class="card-horizontal">
+        <div class="card-horizontal-text">
+        <p><%= deal.item.name %></p>
+        <p><%= deal.duration %> days</p>
+       <p>Total: <%= deal.duration * deal.item.price %></p>
+       </div>
+       </div>
+        <% end %>
+
+
+                <h2 class="center-text text-fat margin-title text-large">Your Current Deals</h2>
+        <% @current_deals.each do |deal| %>
+
+        <div class="card-horizontal-text">
+        <p><%= deal.item.name %></p>
+        <p><%= deal.duration %> days</p>
+       <p>Total: <%= deal.duration * deal.item.price %></p>
+       </div>
+       </div>
+        <% end %>
+          <%= link_to 'New Item', new_item_path, class: "button-small" %>
+
+
+
+
+<!--
+  <div class="card-listing-image" style="background-iamge:url(https://images.unsplash.com/photo-1493932484895-752d1471eab5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60); height:100px; width:100px; background-size:cover;">
+  </div> -->
+
+</div>
