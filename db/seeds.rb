@@ -5,7 +5,7 @@ pierce = User.create!(email: 'pierce@pierce.com',password: '123456')
 
 skates = Item.create!(name: 'skates', price: 12, description: 'Used to roll around', owner: lena)
 football = Item.create!(name: 'football', price: 15, description: 'An American handegg', owner: steven)
-rentedItem = Item.create!(name: 'rented out', price: 15, description: 'This item has been rented', owner_id: 2, list: false)
+rentedItem = Item.create!(name: 'rented out', price: 15, description: 'This item has been rented', owner: steven, list: false)
 
 deal1 = Deal.create!(item_id: 1, user_id: 1, status: 'pending', duration: 2, start_date: Date.today)
 deal2 = Deal.create!(item_id: 2, user_id: 1, status: 'pending', duration: 2, start_date: Date.today)
