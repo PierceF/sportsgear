@@ -21,6 +21,8 @@
   <% @list_items.each do |item| %>
   <div class="card-mainpage">
   <div class="card-mainpage-text">
+    <%= cl_image_tag( item.photos,
+      width: 300, height: 150, crop: :fill) %>
     <%= link_to item.name.capitalize, item_path(item) %>
     <h3><%= item.price %></h3>
     </div>
