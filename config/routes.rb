@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   resources :listings, only: :index
   resources :deals, only: :index
 
+  post '/accept/:id', to: 'listings#accept', as: 'accept'
+  post '/reject/:id', to: 'listings#reject', as: 'reject'
+
   devise_for :users
   #   devise_scope :user do
   #   authenticated :user do
