@@ -10,3 +10,4 @@ rentedItem = Item.create!(name: 'rented out', price: 15, description: 'This item
 
 deal1 = Deal.create!(item_id: 1, user_id: 1, status: 'pending', duration: 2, start_date: Date.today)
 deal2 = Deal.create!(item_id: 2, user_id: 1, status: 'pending', duration: 2, start_date: Date.today)
+deal3 = Deal.create!(item_id: 3, user_id: 1, status: 'ongoing', duration: 2, start_date: Date.today)
