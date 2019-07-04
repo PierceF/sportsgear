@@ -14,7 +14,7 @@
   <div class="card-mainpage">
   <div class="card-mainpage-text">
   <!-- <div class="card-categories-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1545787636-35db70ee2e6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80'); max-width:300px; height:150px; background-size:cover;"> -->
-    <%= cl_image_tag item.photos, height: 150, width: 326, crop: :fill %>
+
     <%= link_to item.name.capitalize, item_path(item) %>
     <h3><%= item.price %></h3>
     </div>
