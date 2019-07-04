@@ -5,6 +5,7 @@
 <h2><%= @item.name.capitalize %></h2>
 <p><%= @item.price %>$</p>
 <%= @item.description %>
+<%= image_tag @item.photos %>
 </div>
 
 <%= render 'formRent', item: @deal %>
