@@ -1,4 +1,4 @@
-
+<div class="container-form">
 <%= simple_form_for(@item) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -24,3 +24,4 @@
     <%= f.button :submit, :class => "button-small button-margin" %>
   </div>
 <% end %>
+</div>
