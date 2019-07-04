@@ -9,6 +9,7 @@ class ItemsController < ApplicationController
     else
       @items = Item.all
     end
+    @list_items = @items.where(list: true)
   end
 
   def show
