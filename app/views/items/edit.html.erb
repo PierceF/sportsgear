@@ -1,5 +1,4 @@
-<h1>Items#edit</h1>
-<p>Find me in app/views/items/edit.html.erb</p>
+<h1>Your can edit your item here.</h1>
 
 
 <div class="row">
@@ -11,6 +10,11 @@
 
       <%= f.label :description %>
       <%= f.text_field :description, class: 'form-control' %>
+
+      <h4>Change item image.</h4>
+      <span class="picture">
+        <%= f.file_field :photos, accept: 'image/jpeg,image/gif,image/png' %>
+      </span>
 
       <%= f.submit "Save changes", class: "btn btn-primary" %>
     <% end %>
