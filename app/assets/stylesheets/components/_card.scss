@@ -6,7 +6,6 @@
   border-radius:4px;
   align-items:flex-end;
   justify-content:space-between;
-  margin:5vh 0;
 
 }
 
@@ -20,17 +19,25 @@
 
 .card-horizontal-text {
   width:300px;
-
+  display:flex;
+  justify-content:space-between;
 }
 
 
 
-.card-horizontal-text h2 {
+.card-horizontal-text a {
   font-weight:200;
+  margin:3px 3px;
+  color:black;
+}
 
+.card-horizontal-text a:hover {
+  transition:0.3s;
+  color:red;
+  text-decoration:none;
 }
 
 .card-horizontal p {
-    font-weight:800;
-    margin-bottom:0px;
+    font-weight:400;
+    margin:3px 3px;
 }

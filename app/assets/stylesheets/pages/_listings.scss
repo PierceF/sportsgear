@@ -1,5 +1,14 @@
 
 
+.main-group-one {
+
+    font-family: 'Poppins', sans-serif;
+    display:grid;
+    grid-gap:20px;
+    grid-template-columns:1fr 1fr;
+
+
+}
 
 .main-group {
 
@@ -7,6 +16,8 @@
     display:grid;
     grid-gap:30px;
     grid-template-columns:1fr 1fr 1fr 1fr;
+    margin:80px 0px;
+
 }
 
 .box-text-styling {
@@ -21,5 +32,4 @@
   background-color:#FFFFFF;
   border-radius:4px;
 }
-
 

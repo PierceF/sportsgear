@@ -4,33 +4,40 @@
 
 <div class="container-main">
 <h1 class="center-text">Your current listings</h1>
-<div class="grid-main">
+<div class="main-group-one">
     <% @items.each do |item| %>
     <div class="card-horizontal">
       <div class="card-horizontal-image">
-      <%= image_tag("https://images.unsplash.com/photo-1545203993-f3a6732be268?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80", width: '100px', height: '100px') %>
       </div>
-        <p><%= item.name.capitalize %></p>
-          <p><%= item.price %></p>
-              <%= link_to 'Show', item %>
+      <div class="card-horizontal-text">
+        <p><%= link_to item.name.capitalize, item_path(item) %></p>
+          <p><%= item.price %>$ </p>
+          </div>
             </div>
-
         <% end %>
         </div>
         <h2 class="center-text">Your Current Deals</h2>
-
-        <% @deals.each do |deal| %>
         <div class="main-group">
-          <div class="box-text-styling">
+        <% @deals.each do |deal| %>
 
+          <div class="box-text-styling">
         <p style="font-weight:800;"><%= deal.item.name %></p>
         <p style="font-weight:200"><%= deal.item.description %></p>
         <p style="font-weight:800";><%= deal.duration %> days</p>
        <p style="font-weight:200;">Total: <%= deal.duration * deal.item.price %></p>
        </div>
-
-       </div>
         <% end %>
+        </div>
           <%= link_to 'New Item', new_item_path, class: "button-small" %>
           </div>
       </div>
+
+
+<div class="card-listing">
+  <div class="card-listing-image" style="background-iamge:url(https://images.unsplash.com/photo-1493932484895-752d1471eab5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60); height:100px; width:100px; background-size:cover;">
+  </div>
+  <div class="card-listing-text">
+    <h2>helloTitle</h2>
+    <p>hello</p>
+  </div>
+</div>
