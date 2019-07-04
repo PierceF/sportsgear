@@ -10,6 +10,7 @@ gem 'redis'
 gem 'geocoder'
 
 
+
 gem 'cloudinary', '~> 1.9.1'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
@@ -19,6 +20,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
 gem 'pundit'
+gem 'pg_search'
 gem 'carrierwave', '~> 1.3', '>= 1.3.1'
 
 group :development do
@@ -26,6 +28,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'dotenv-rails'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'listen', '~> 3.0.5'

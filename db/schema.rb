@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2019_07_04_063812) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "owner_id"
+    t.boolean "list", default: true
     t.index ["owner_id"], name: "index_items_on_owner_id"
   end
 

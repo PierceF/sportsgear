@@ -4,10 +4,13 @@ class ItemsController < ApplicationController
   before_action :authenticate_owner!, except: [:index, :show]
 
   def index
-    # @items = Item.all
-    @items = Item.all
-
-    @items = Item.where.not(latitude: nil, longitude: nil)
+    if params[:query].present?
+      @items = Item.where.not(latitude: nil, longitude: nil)
+                   .search_by_name_and_description(params[:query])
+    else
+      @items = Item.where.not(latitude: nil, longitude: nil)
+    end
+    @list_items = @items.where(list: true)
 
     @markers = @items.map do |item|
       {
