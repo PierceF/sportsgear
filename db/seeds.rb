@@ -8,6 +8,6 @@ skates = Item.create!(name: 'skates', price: 12, description: 'Used to roll arou
 football = Item.create!(name: 'football', price: 15, description: 'An American handegg', owner_id: 2)
 rentedItem = Item.create!(name: 'rented out', price: 15, description: 'This item has been rented', owner_id: 2)
 
-deal1 = Deal.create!(item_id: 1, user_id: 1, status: 'pending', duration: 2, start_date: Date.today)
-deal2 = Deal.create!(item_id: 2, user_id: 1, status: 'pending', duration: 2, start_date: Date.today)
-deal3 = Deal.create!(item_id: 3, user_id: 1, status: 'ongoing', duration: 2, start_date: Date.today)
+deal1 = Deal.create!(item_id: 1, user_id: 1, status: 'pending', duration: 2, start_date: Date.today, end_date: Date.today + 2)
+deal2 = Deal.create!(item_id: 2, user_id: 1, status: 'pending', duration: 2, start_date: Date.today, end_date: Date.today + 2)
+deal3 = Deal.create!(item_id: 3, user_id: 1, status: 'ongoing', duration: 2, start_date: Date.today, end_date: Date.today + 2)

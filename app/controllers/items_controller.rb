@@ -4,16 +4,7 @@ class ItemsController < ApplicationController
   before_action :authenticate_owner!, except: [:index, :show]
 
   def index
-    @deals = Deal.where(status: "ongoing")
-    @items_to_change = []
-    @deals.each do |deal|
-      @items_to_change << Item.find(deal.item_id)
-    end
-
-    @items_to_change.each do |item|
-      item.list = false
-      item.save
-    end
+    Deal.ongoing
 
     if params[:query].present?
       @items = Item.search_by_name_and_description(params[:query])
