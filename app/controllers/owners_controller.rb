@@ -8,4 +8,9 @@ class OwnersController < ApplicationController
     @current_deals = current_owner.deals.where(status: 'ongoing')
     @finished_deals = current_owner.deals.where(status: 'finished')
   end
+  # def profile
+  #   @owner.address = current_address
+  #   @owner.city = current_city
+  #   @owner.country = current_country
+  # end
 end

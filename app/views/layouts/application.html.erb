@@ -21,6 +21,7 @@
               <ul>
                 <li><%= link_to "Home", deals_path %></li>
                 <li><a class="scroll-event-menu" href="">Find Gear</a></li>
+                <li><%= link_to "Profile", deals_path %></li>
                 <li><%= link_to "Log Out", destroy_user_session_path, method: :delete, :class => "button-small-red" %></li>
                 <%= link_to image_tag("steven.png", :alt => "Image Description", :class => "avatar"), listings_path %>
                 <li><p style="font-size:10px; opacity:0.5; margin-right:10px; font-weight:800;">USER</p></li>
@@ -30,6 +31,7 @@
               <li><a style="display:none;" class="scroll-event-menu" href="">Find Gear</a></li>
               <li><%= link_to "Current Deals", listings_path %></li>
               <li><%= link_to "List New Gear", listings_path %></li>
+              <li><%= link_to "Profile", owner_path(current_owner) %></li>
               <li><%= link_to "Log Out", destroy_owner_session_path, method: :delete, :class => "button-small-red" %></li>
               <%= link_to image_tag("profile.jpg", :alt => "Image Description", :class => "avatar"), listings_path %>
               <li><p style="font-size:10px; opacity:0.5; margin-right:10px; font-weight:800;">OWNER</p></li>

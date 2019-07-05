@@ -5,7 +5,9 @@
 
 
 <div class="container-main">
-
+  <div class="container-button" style="margin-top:50px;">
+      <%= link_to 'New Item', new_item_path, class: "button-large-color";%>
+    </div>
   <h2 class="center-text text-fat margin-title text-medium">Current Listings</h2>
     <% @items.each do |item| %>
     <div class="card-horizontal">
@@ -26,13 +28,31 @@
         <p style="font-weight:800;"><%= deal.item.name %></p>
         <p style="font-weight:800";><%= deal.duration %> days</p>
        <p style="font-weight:200;">Total: <%= deal.duration * deal.item.price %></p>
-       <%= button_to "Accept", { action: "accept", id: deal.id }, data: { confirm: "Are you sure?" } %>
-       <%= button_to "Reject", { action: "reject", id: deal.id }, data: { confirm: "Are you sure?" } %>
-
+        <div class="group-this" style="flex-direction-column;">
+       <%= button_to "ACCEPT",{ action: "accept", id: deal.id }, data: { confirm: "Are you sure?" }, :class => "button-accept" %>
+        <%= button_to "REJECT", { action: "reject", id: deal.id }, data: { confirm: "Are you sure?" }, :class => "button-decline" %>
+        </div>
 
        </div>
        </div>
         <% end %>
+
+
+        <h2 class="center-text text-fat margin-title text-medium">Your Finished Deals</h2>
+        <% @finished_deals.each do |deal| %>
+        <div class="card-horizontal">
+          <%= cl_image_tag deal.item.photos, height: 100, width: 100, :class => "card-horizontal-image" %>
+        <div class="card-horizontal-text">
+        <p style="font-weight:800;"><%= deal.item.name %></p>
+        <p style="font-weight:800";>Finished on <%= deal.end_date%></p>
+       <p style="font-weight:200;">Total: <%= deal.duration * deal.item.price %></p>
+
+       </div>
+       </div>
+        <% end %>
+
+
+
         <div class="container-button">
           <%= link_to 'New Item', new_item_path, class: "button-large-color" %>
           </div>
