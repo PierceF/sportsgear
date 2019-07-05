@@ -1,13 +1,11 @@
 .card-horizontal {
   display:flex;
   height:100px;
-  width:350px;
+  width:700px;
   margin:15px auto;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius:4px;
   background-color:white;
-
-
 }
 
 .card-horizontal-image {
@@ -19,7 +17,7 @@
 }
 
 .card-horizontal-text {
-  width:300px;
+  width:700px;
   display:flex;
   align-items:flex-end;
   justify-content:space-between;
