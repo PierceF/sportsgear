@@ -1,15 +1,15 @@
-
+<div class="section_one">
 <div class="banner-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1459378560864-f0b73495599c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80);">
-  <h2>FIND THE BEST GEAR FOR YOUR NEXT <br>
-    <span class="banner-text-style"> BIG ADVENTURE</span>
-  </h2>
-  <a class="button-large" href="">FIND GEAR</a>
-</div>
+
+ <h2>FIND THE BEST GEAR FOR YOUR NEXT <br><span class="banner-text-style"> BIG ADVENTURE</span></h2>
+ <a class="button-large scroll-event-button" href="">FIND GEAR</a>
+ </div>
+
 <div class="container-form">
 <%= form_tag root_path, method: :get do %>
   <%= text_field_tag :query,
     params[:query],
-    class: "form-control",
+    class: "form-control margin-title",
     placeholder: "Find a gear to rent"
   %>
 <% end %>
@@ -24,22 +24,24 @@
 
 <div class="container-main">
 </div>
-
-<div class="container-main">
-<h2 class="text-center text-fat margin-title text-large"> OUR TOP PICKS</h2>
-<div class="grid-main">
-  <% @list_items.each do |item| %>
-  <div class="card-mainpage">
-  <div class="card-mainpage-text">
-    <%= cl_image_tag( item.photos,
-      width: 300, height: 150, crop: :fill) %>
-    <%= link_to item.name.capitalize, item_path(item) %>
-    <h3><%= item.price %></h3>
-    </div>
-    </div>
-    <% end %>
-  </div>
 </div>
 
 
+<div class="section-two">
+<div class="container-main">
+<h2 class="text-center text-fat margin-title text-large">Top Picks</h2>
+<div class="grid-main">
+  <% @list_items.each do |item| %>
+  <div class="card-mainpage">
+    <%= cl_image_tag( item.photos,
+      width: 326, height: 200, crop: :fill) %>
+      <div class="card-mainpage-text flexbox-card ">
+    <%= link_to item.name.capitalize, item_path(item), :class => "text-card text-fat card-margin" %>
+    <h3 class="text-card text-slim card-margin"><%= item.price %> $</h3>
+    </div>
+    </div>
+    <% end %>
 
+    </div>
+   </div>
+  </div>
