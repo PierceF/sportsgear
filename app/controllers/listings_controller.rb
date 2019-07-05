@@ -10,6 +10,19 @@ class ListingsController < ApplicationController
     @finished_deals = current_owner.deals.where(status: 'finished')
   end
 
+  def accept
+   @deal = Deal.find(params[:id])
+   @deal.set
+   @deal.save!
+  end
+
+  def reject
+   @deal = Deal.find(params[:id])
+   @deal.status = "rejected"
+   @deal.list = true
+   @deal.save!
+  end
+
   private
 
   def set_owner

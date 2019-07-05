@@ -24,6 +24,10 @@
         <p style="font-weight:800;"><%= deal.item.name %></p>
         <p style="font-weight:800";><%= deal.duration %> days</p>
        <p style="font-weight:200;">Total: <%= deal.duration * deal.item.price %></p>
+       <%= button_to "Accept", { action: "accept", id: deal.id }, data: { confirm: "Are you sure?" } %>
+       <%= button_to "Reject", { action: "reject", id: deal.id }, data: { confirm: "Are you sure?" } %>
+
+
        </div>
        </div>
         <% end %>
