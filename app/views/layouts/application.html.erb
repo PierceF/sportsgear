@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>TODO</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -29,7 +28,8 @@
                 </ul>
               <% elsif owner_signed_in? %>
               <ul>
-              <li><%= link_to "Home", listings_path %></li>
+              <li><a style="display:none;" class="scroll-event-menu" href="">Find Gear</a></li>
+              <li><%= link_to "Current Deals", listings_path %></li>
               <li><%= link_to "List New Gear", listings_path %></li>
               <li><%= link_to "Profile", owner_path(current_owner) %></li>
               <li><%= link_to "Log Out", destroy_owner_session_path, method: :delete, :class => "button-small-red" %></li>
@@ -43,8 +43,6 @@
                 <li><%= link_to "Rent Gear", listings_path%></li>
                 <li><%= link_to "Register", new_user_registration_path, :href => "#popup2" %></li>
                 <li><a class="button-small " href="#popup1">Log In</a></li>
-
-                <%= link_to image_tag("profile.jpg", :alt => "Image Description", :class => "avatar"), root_path %>
                 </ul>
               <% end %>
 
@@ -105,4 +103,3 @@
 
     </body>
   </html>
-
