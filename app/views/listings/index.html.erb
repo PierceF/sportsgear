@@ -33,6 +33,23 @@
        </div>
        </div>
         <% end %>
+
+
+        <h2 class="center-text text-fat margin-title text-medium">Your Finished Deals</h2>
+        <% @finished_deals.each do |deal| %>
+        <div class="card-horizontal">
+          <%= cl_image_tag deal.item.photos, height: 100, width: 100, :class => "card-horizontal-image" %>
+        <div class="card-horizontal-text">
+        <p style="font-weight:800;"><%= deal.item.name %></p>
+        <p style="font-weight:800";>Finished on <%= deal.end_date%></p>
+       <p style="font-weight:200;">Total: <%= deal.duration * deal.item.price %></p>
+
+       </div>
+       </div>
+        <% end %>
+
+
+
         <div class="container-button">
           <%= link_to 'New Item', new_item_path, class: "button-large-color" %>
           </div>
