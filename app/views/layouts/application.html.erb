@@ -23,6 +23,8 @@
                 <li><%= link_to "Home", root_path %></li>
                 <li><a class="scroll-event-menu" href="">Find Gear</a></li>
                 <li><%= link_to "Log Out", destroy_user_session_path, method: :delete, :class => "button-small-red" %></li>
+                <%= link_to image_tag("steven", :alt => "Image Description", :class => "avatar"), listings_path %>
+                <li><p style="font-size:10px; opacity:0.5; margin-right:10px; font-weight:800;">USER</p></li>
                 </ul>
               <% elsif owner_signed_in? %>
               <ul>
@@ -30,6 +32,7 @@
               <li><%= link_to "List New Gear", listings_path %></li>
               <li><%= link_to "Log Out", destroy_owner_session_path, method: :delete, :class => "button-small-red" %></li>
               <%= link_to image_tag("profile", :alt => "Image Description", :class => "avatar"), listings_path %>
+              <li><p style="font-size:10px; opacity:0.5; margin-right:10px; font-weight:800;">OWNER</p></li>
               </ul>
               <% else %>
               <ul>
@@ -38,7 +41,6 @@
                 <li><%= link_to "Rent Gear", listings_path%></li>
                 <li><%= link_to "Register", new_user_registration_path, :href => "#popup2" %></li>
                 <li><a class="button-small " href="#popup1">Log In</a></li>
-                <%= link_to image_tag("profile", :alt => "Image Description", :class => "avatar"), root_path %>
                 </ul>
               <% end %>
 
