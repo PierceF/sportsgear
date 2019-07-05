@@ -1,5 +1,17 @@
 
+<div class="container-main" style="text-align:center;">
+<div class="container-form-address">
+  <h2>Hello Pontus</h2>
+   <h4>Your current profile</h4>
+    <p>Address
+    <br>
+    <%= current_user.address %></p>
+
+  </div>
+</div>
+
 <h2>Your Current Deals</h2>
+
   <div class="listings-flex">
   <% @deals.each do |deal| %>
     <% if deal.status == 'ongoing' || deal.status == 'pending' %>

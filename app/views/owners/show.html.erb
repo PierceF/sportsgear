@@ -1,6 +1,16 @@
+<div class="container-main" style="text-align:center;">
+<div class="container-form-address">
+  <h2>Hello Lena</h2>
+   <h4>Your current profile</h4>
+    <p>Address</p>
+    <br>
+    <%= @owner.address %></p>
+
+  </div>
+</div>
+
 
 <div class="container-main">
-
   <h2 class="center-text text-fat margin-title text-large">Your current listings</h2>
     <% @items.each do |item| %>
     <div class="card-horizontal">

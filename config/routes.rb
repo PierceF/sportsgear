@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  get 'profiles/index'
+  get 'profiles/show'
+  get 'profiles/edit'
+  get 'profiles/update'
+  get 'profiles/show'
   resources :listings, only: :index
   resources :deals, only: :index
 
