@@ -5,7 +5,7 @@
 
 
 lena = Owner.create!(email: 'lena@lena.com',password: '123456', address: 'Zacharias Jansestraat 5, Amsterdam, The Netherlands')
-pontus = User.create!(email: 'pontus@pontus.com',password: '123456')
+pontus = User.create!(email: 'pontus@pontus.com',password: '123456', address: 'Blastraat 5, Amsterdam, The Netherlands')
 steven = Owner.create!(email: 'steven@steven.com',password: '123456', address: 'Dam 5, 1012RB, Paris, France')
 pierce = User.create!(email: 'pierce@pierce.com',password: '123456')
 
