@@ -13,25 +13,28 @@
     </head>
     <body>
       <div class="navbar-main">
-        <%= link_to image_tag("logo", :alt => "Image Description", width:140), root_path %>
+        <%= link_to image_tag("logo.png", :alt => "Image Description", width:140), root_path %>
 
         <div class="group-navbar">
           <div class="navbar-list">
 
               <% if user_signed_in? %>
               <ul>
-                <li><%= link_to "Home", root_path %></li>
+                <li><%= link_to "Home", deals_path %></li>
                 <li><a class="scroll-event-menu" href="">Find Gear</a></li>
                 <li><%= link_to "Profile", deals_path %></li>
                 <li><%= link_to "Log Out", destroy_user_session_path, method: :delete, :class => "button-small-red" %></li>
+                <%= link_to image_tag("steven", :alt => "Image Description", :class => "avatar"), listings_path %>
+                <li><p style="font-size:10px; opacity:0.5; margin-right:10px; font-weight:800;">USER</p></li>
                 </ul>
               <% elsif owner_signed_in? %>
               <ul>
-              <li><%= link_to "Home", root_path %></li>
+              <li><%= link_to "Home", listings_path %></li>
               <li><%= link_to "List New Gear", listings_path %></li>
               <li><%= link_to "Profile", owner_path(current_owner) %></li>
               <li><%= link_to "Log Out", destroy_owner_session_path, method: :delete, :class => "button-small-red" %></li>
-              <%= link_to image_tag("profile", :alt => "Image Description", :class => "avatar"), listings_path %>
+              <%= link_to image_tag("profile.jpg", :alt => "Image Description", :class => "avatar"), listings_path %>
+              <li><p style="font-size:10px; opacity:0.5; margin-right:10px; font-weight:800;">OWNER</p></li>
               </ul>
               <% else %>
               <ul>
@@ -40,7 +43,8 @@
                 <li><%= link_to "Rent Gear", listings_path%></li>
                 <li><%= link_to "Register", new_user_registration_path, :href => "#popup2" %></li>
                 <li><a class="button-small " href="#popup1">Log In</a></li>
-                <%= link_to image_tag("profile", :alt => "Image Description", :class => "avatar"), root_path %>
+
+                <%= link_to image_tag("profile.jpg", :alt => "Image Description", :class => "avatar"), root_path %>
                 </ul>
               <% end %>
 

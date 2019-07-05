@@ -1,3 +1,17 @@
+<h2>Waiting to hear from owner</h2>
+  <div class="listings-flex">
+  <% @deals.each do |deal| %>
+    <% if deal.status == 'pending' %>
+        <div class="main-group">
+              <p><%= deal.item.name %></p>
+              <p><%= deal.item.price %></p>
+              <p><%= deal.duration %></p>
+        </div>
+    <% end %>
+  <% end %>
+  </div>
+
+
 
 <div class="container-main" style="text-align:center;">
 <div class="container-form-address">
@@ -14,7 +28,7 @@
 
   <div class="listings-flex">
   <% @deals.each do |deal| %>
-    <% if deal.status == 'ongoing' || deal.status == 'pending' %>
+    <% if deal.status == 'ongoing' %>
         <div class="main-group">
               <p><%= deal.item.name %></p>
               <p><%= deal.item.price %></p>

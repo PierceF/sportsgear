@@ -55,9 +55,13 @@ border-radius:10px;
 
 
 .grid-main {
+  max-width:200px;
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap:10px;
+  grid-gap:30px;
+  justify-content:center;
+  margin: 0 auto;
+
 }
 
 .center-text {
