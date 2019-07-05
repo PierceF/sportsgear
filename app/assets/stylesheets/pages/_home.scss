@@ -1,5 +1,23 @@
 // Specific CSS for your home-page
 
+.margin-card {
+  margin-left:70px;
+}
+
+.image-border-radius {
+  border-radius:10px;
+}
+
+.flexbox {
+display:flex;
+align-items:center;
+background-color:white;
+padding:20px;
+border-radius:10px;
+}
+
+
+
 .section-one {
   height:100vh;
 }
@@ -26,6 +44,11 @@
  margin:0 auto;
 }
 
+.container-button {
+  width:190px;
+  margin:0 auto;
+}
+
 
 .grid-main {
   display:grid;
@@ -41,6 +64,10 @@
   font-weight:800;
 }
 
+.text-slim {
+  font-weight:200;
+}
+
 .margin-title {
   margin:50px 0px;
 }
@@ -53,10 +80,18 @@
   font-size: 48px;
 }
 
+.text-card {
+  font-size:20px;
+}
+
 .text-medium {
   font-size: 32px;
 }
 
 .text-small {
   font-size:16px;
+}
+
+.card-margin {
+ margin: 4px 4px;
 }

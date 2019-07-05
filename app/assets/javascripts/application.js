@@ -3,17 +3,31 @@
 
 
 
-const scrollToSomething = (targetElement, pixels) => {
-  target = document.querySelector(targetElement);
-targetElement.onClick = window.scrollTo({
-  top: pixels,
-  behavior: 'smooth'
+// const scrollToSomething = (targetElement, pixels) => {
+//   target = document.querySelector(targetElement);
+// targetElement.onClick = window.scrollTo({
+//   top: pixels,
+//   behavior: 'smooth'
+// });
+// };
+
+
+targetNavbar = document.querySelector(".scroll-event-menu");
+targetButton = document.querySelector(".scroll-event-button");
+
+
+targetNavbar.addEventListener("click", (event) => {
+  event.preventDefault();
+  window.scrollTo({
+    top: 850,
+    behavior: 'smooth'
+  });
 });
-};
 
-scrollToSomething(".scroll-event-button", 800)
-scrollToSomething(".scroll-event-menu", 1000)
-
-function refreshPage(){
-    window.location.reload();
-}
+targetButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  window.scrollTo({
+    top: 850,
+    behavior: 'smooth'
+  });
+});
