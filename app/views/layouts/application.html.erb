@@ -28,7 +28,8 @@
                 </ul>
               <% elsif owner_signed_in? %>
               <ul>
-              <li><%= link_to "Home", listings_path %></li>
+              <li><a style="display:none;" class="scroll-event-menu" href="">Find Gear</a></li>
+              <li><%= link_to "Current Deals", listings_path %></li>
               <li><%= link_to "List New Gear", listings_path %></li>
               <li><%= link_to "Log Out", destroy_owner_session_path, method: :delete, :class => "button-small-red" %></li>
               <%= link_to image_tag("profile.jpg", :alt => "Image Description", :class => "avatar"), listings_path %>
@@ -103,4 +104,3 @@
 
     </body>
   </html>
-
