@@ -24,7 +24,7 @@
   <% @list_items.each do |item| %>
   <div class="card-mainpage">
     <%= cl_image_tag( item.photos,
-      width: 326, height: 200, crop: :fill) %>
+      width: 270, height: 200, crop: :fill) %>
       <div class="card-mainpage-text flexbox-card ">
     <%= link_to item.name.capitalize, item_path(item), :class => "text-card text-fat card-margin" %>
     <h3 class="text-card text-slim card-margin"><%= item.price %> $</h3>
