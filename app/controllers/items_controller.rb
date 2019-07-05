@@ -14,6 +14,16 @@ class ItemsController < ApplicationController
     end
 
     @list_items = @items.where(list: true)
+
+    @markers = @items.map do |item|
+      {
+        lat: item.owner.latitude,
+        lng: item.owner.longitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { item: item })
+
+      }
+    end
+    # raise
   end
 
   def show
