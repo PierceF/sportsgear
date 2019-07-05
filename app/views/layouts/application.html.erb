@@ -19,7 +19,7 @@
 
               <% if user_signed_in? %>
               <ul>
-                <li><%= link_to "Home", deals_path %></li>
+                <li><%= link_to "Home", root_path %></li>
                 <li><a class="scroll-event-menu" href="">Find Gear</a></li>
                 <li><%= link_to "Profile", deals_path %></li>
                 <li><%= link_to "Log Out", destroy_user_session_path, method: :delete, :class => "button-small-red" %></li>

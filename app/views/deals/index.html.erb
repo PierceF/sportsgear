@@ -1,9 +1,16 @@
+<div class="container-main" style="text-align:center;">
+<div class="container-form-address">
+  <h2 style="margin:50px 0px;">Hello Pontus</h2>
+  <p><%= current_user.address %></p>
 
-<head>
-    <title>My Deals</title>
-</head>
+  </div>
+  </div>
 
-<h2>Waiting to hear from owner</h2>
+
+<div class="container-main" style="text-align:center;">
+    <h3 class="text-slim">My Deals</h3>
+
+<h2 class="text-slim">Waiting to hear from owner</h2>
   <div class="listings-flex">
   <% @deals.each do |deal| %>
     <% if deal.status == 'pending' %>
@@ -19,16 +26,7 @@
 
 
 
-<div class="container-main" style="text-align:center;">
-<div class="container-form-address">
-  <h2>Hello Pontus</h2>
-   <h4>Your current profile</h4>
-    <p>Address
-    <br>
-    <%= current_user.address %></p>
 
-  </div>
-</div>
 
 
 <h2>Your Current Deals</h2>
@@ -44,4 +42,5 @@
     <% end %>
   <% end %>
   </div>
-
+  </div>
+  </div>
