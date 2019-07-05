@@ -3,6 +3,17 @@
     <title>My Deals</title>
 </head>
 
+
+<div class="container-main" style="text-align:center;">
+<div class="container-form-address">
+  <h2>Hello Pontus</h2>
+   <h4>Your current profile</h4>
+    <br>
+    <p>123 Sweden Castle Lane, Stockholm</p>
+
+  </div>
+</div>
+
 <h2>Waiting to hear from owner</h2>
   <div class="listings-flex">
   <% @deals.each do |deal| %>
@@ -15,20 +26,6 @@
     <% end %>
   <% end %>
   </div>
-
-
-
-
-<div class="container-main" style="text-align:center;">
-<div class="container-form-address">
-  <h2>Hello Pontus</h2>
-   <h4>Your current profile</h4>
-    <p>Address
-    <br>
-    <%= current_user.address %></p>
-
-  </div>
-</div>
 
 
 <h2>Your Current Deals</h2>
