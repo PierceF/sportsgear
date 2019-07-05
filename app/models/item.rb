@@ -3,7 +3,7 @@ class Item < ApplicationRecord
   validates :name, presence: true
   validates :price, presence: true
   belongs_to :owner
-  has_many :deals
+  has_many :deals, dependent: :destroy
   mount_uploader :photos, PhotoUploader
 
   include PgSearch
